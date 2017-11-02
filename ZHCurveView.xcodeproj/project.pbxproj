@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FC1D91C1FAABB5E00845F09 /* ZHDraw.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D91A1FAABB5900845F09 /* ZHDraw.m */; };
+		0FC1D9211FAABB7400845F09 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D91E1FAABB7400845F09 /* NSDate+Extension.m */; };
+		0FC1D9221FAABB7400845F09 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D91F1FAABB7400845F09 /* NSString+Extension.m */; };
+		0FC1D9251FAABB8500845F09 /* ZHChartView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D9241FAABB8200845F09 /* ZHChartView.m */; };
+		0FC1D9281FAABB9700845F09 /* ZHCoordinateBXModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D9271FAABB9400845F09 /* ZHCoordinateBXModel.m */; };
+		0FC1D92B1FAABB9D00845F09 /* ZHCoordinateLYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D92A1FAABB9D00845F09 /* ZHCoordinateLYModel.m */; };
+		0FC1D9361FAABBA700845F09 /* ZHCoordinateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D92C1FAABBA500845F09 /* ZHCoordinateView.m */; };
+		0FC1D9371FAABBA700845F09 /* ZHDrawPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D92F1FAABBA500845F09 /* ZHDrawPointModel.m */; };
+		0FC1D9381FAABBA700845F09 /* ZHDataPointModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D9331FAABBA600845F09 /* ZHDataPointModel.m */; };
+		0FC1D9391FAABBA700845F09 /* ZHCoordinateRYModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D9341FAABBA600845F09 /* ZHCoordinateRYModel.m */; };
+		0FC1D93A1FAABBA700845F09 /* ZHCoordinateTXModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC1D9351FAABBA600845F09 /* ZHCoordinateTXModel.m */; };
 		0FD084671FAABA230090871A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD084661FAABA230090871A /* AppDelegate.m */; };
 		0FD0846A1FAABA230090871A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FD084691FAABA230090871A /* ViewController.m */; };
 		0FD0846D1FAABA230090871A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD0846B1FAABA230090871A /* Main.storyboard */; };
@@ -35,6 +46,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0FC1D91A1FAABB5900845F09 /* ZHDraw.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHDraw.m; sourceTree = "<group>"; };
+		0FC1D91B1FAABB5900845F09 /* ZHDraw.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHDraw.h; sourceTree = "<group>"; };
+		0FC1D91D1FAABB7400845F09 /* NSDate+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		0FC1D91E1FAABB7400845F09 /* NSDate+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+		0FC1D91F1FAABB7400845F09 /* NSString+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		0FC1D9201FAABB7400845F09 /* NSString+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		0FC1D9231FAABB8200845F09 /* ZHChartView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHChartView.h; sourceTree = "<group>"; };
+		0FC1D9241FAABB8200845F09 /* ZHChartView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHChartView.m; sourceTree = "<group>"; };
+		0FC1D9261FAABB9400845F09 /* ZHCoordinateBXModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHCoordinateBXModel.h; sourceTree = "<group>"; };
+		0FC1D9271FAABB9400845F09 /* ZHCoordinateBXModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHCoordinateBXModel.m; sourceTree = "<group>"; };
+		0FC1D9291FAABB9D00845F09 /* ZHCoordinateLYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHCoordinateLYModel.h; sourceTree = "<group>"; };
+		0FC1D92A1FAABB9D00845F09 /* ZHCoordinateLYModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHCoordinateLYModel.m; sourceTree = "<group>"; };
+		0FC1D92C1FAABBA500845F09 /* ZHCoordinateView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHCoordinateView.m; sourceTree = "<group>"; };
+		0FC1D92D1FAABBA500845F09 /* ZHCoordinateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHCoordinateView.h; sourceTree = "<group>"; };
+		0FC1D92E1FAABBA500845F09 /* ZHDrawPointModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHDrawPointModel.h; sourceTree = "<group>"; };
+		0FC1D92F1FAABBA500845F09 /* ZHDrawPointModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHDrawPointModel.m; sourceTree = "<group>"; };
+		0FC1D9301FAABBA600845F09 /* ZHDataPointModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHDataPointModel.h; sourceTree = "<group>"; };
+		0FC1D9311FAABBA600845F09 /* ZHCoordinateRYModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHCoordinateRYModel.h; sourceTree = "<group>"; };
+		0FC1D9321FAABBA600845F09 /* ZHCoordinateTXModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZHCoordinateTXModel.h; sourceTree = "<group>"; };
+		0FC1D9331FAABBA600845F09 /* ZHDataPointModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHDataPointModel.m; sourceTree = "<group>"; };
+		0FC1D9341FAABBA600845F09 /* ZHCoordinateRYModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHCoordinateRYModel.m; sourceTree = "<group>"; };
+		0FC1D9351FAABBA600845F09 /* ZHCoordinateTXModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZHCoordinateTXModel.m; sourceTree = "<group>"; };
 		0FD084621FAABA230090871A /* ZHCurveView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZHCurveView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FD084651FAABA230090871A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0FD084661FAABA230090871A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -78,6 +111,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC1D9111FAABB0900845F09 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				0FC1D91B1FAABB5900845F09 /* ZHDraw.h */,
+				0FC1D91A1FAABB5900845F09 /* ZHDraw.m */,
+				0FC1D91D1FAABB7400845F09 /* NSDate+Extension.h */,
+				0FC1D91E1FAABB7400845F09 /* NSDate+Extension.m */,
+				0FC1D9201FAABB7400845F09 /* NSString+Extension.h */,
+				0FC1D91F1FAABB7400845F09 /* NSString+Extension.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		0FC1D9121FAABB1000845F09 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				0FC1D9231FAABB8200845F09 /* ZHChartView.h */,
+				0FC1D9241FAABB8200845F09 /* ZHChartView.m */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		0FC1D9131FAABB1900845F09 /* Coordinate */ = {
+			isa = PBXGroup;
+			children = (
+				0FC1D92D1FAABBA500845F09 /* ZHCoordinateView.h */,
+				0FC1D92C1FAABBA500845F09 /* ZHCoordinateView.m */,
+				0FC1D9301FAABBA600845F09 /* ZHDataPointModel.h */,
+				0FC1D9331FAABBA600845F09 /* ZHDataPointModel.m */,
+				0FC1D92E1FAABBA500845F09 /* ZHDrawPointModel.h */,
+				0FC1D92F1FAABBA500845F09 /* ZHDrawPointModel.m */,
+				0FC1D9261FAABB9400845F09 /* ZHCoordinateBXModel.h */,
+				0FC1D9271FAABB9400845F09 /* ZHCoordinateBXModel.m */,
+				0FC1D9291FAABB9D00845F09 /* ZHCoordinateLYModel.h */,
+				0FC1D92A1FAABB9D00845F09 /* ZHCoordinateLYModel.m */,
+				0FC1D9311FAABBA600845F09 /* ZHCoordinateRYModel.h */,
+				0FC1D9341FAABBA600845F09 /* ZHCoordinateRYModel.m */,
+				0FC1D9321FAABBA600845F09 /* ZHCoordinateTXModel.h */,
+				0FC1D9351FAABBA600845F09 /* ZHCoordinateTXModel.m */,
+			);
+			path = Coordinate;
+			sourceTree = "<group>";
+		};
 		0FD084591FAABA230090871A = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +181,9 @@
 				0FD084661FAABA230090871A /* AppDelegate.m */,
 				0FD084681FAABA230090871A /* ViewController.h */,
 				0FD084691FAABA230090871A /* ViewController.m */,
+				0FC1D9131FAABB1900845F09 /* Coordinate */,
+				0FC1D9121FAABB1000845F09 /* Chart */,
+				0FC1D9111FAABB0900845F09 /* Tool */,
 				0FD0846B1FAABA230090871A /* Main.storyboard */,
 				0FD0846E1FAABA230090871A /* Assets.xcassets */,
 				0FD084701FAABA230090871A /* LaunchScreen.storyboard */,
@@ -266,8 +345,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD0846A1FAABA230090871A /* ViewController.m in Sources */,
+				0FC1D9221FAABB7400845F09 /* NSString+Extension.m in Sources */,
+				0FC1D9211FAABB7400845F09 /* NSDate+Extension.m in Sources */,
+				0FC1D93A1FAABBA700845F09 /* ZHCoordinateTXModel.m in Sources */,
 				0FD084751FAABA230090871A /* main.m in Sources */,
+				0FC1D9381FAABBA700845F09 /* ZHDataPointModel.m in Sources */,
+				0FC1D9391FAABBA700845F09 /* ZHCoordinateRYModel.m in Sources */,
+				0FC1D92B1FAABB9D00845F09 /* ZHCoordinateLYModel.m in Sources */,
 				0FD084671FAABA230090871A /* AppDelegate.m in Sources */,
+				0FC1D9371FAABBA700845F09 /* ZHDrawPointModel.m in Sources */,
+				0FC1D9361FAABBA700845F09 /* ZHCoordinateView.m in Sources */,
+				0FC1D9281FAABB9700845F09 /* ZHCoordinateBXModel.m in Sources */,
+				0FC1D91C1FAABB5E00845F09 /* ZHDraw.m in Sources */,
+				0FC1D9251FAABB8500845F09 /* ZHChartView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
