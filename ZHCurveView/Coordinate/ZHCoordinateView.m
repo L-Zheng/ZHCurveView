@@ -131,7 +131,10 @@
         //2、绘制分割线
         [self drawSegmentLine];
         
-        //3、绘制点数据
+        //3、绘制分割区域阴影
+        [self drawSegmentAreaShadow];
+        
+        //4、绘制点数据
         if (self.drawPointModels.count) {
             [ZHDraw drawLine:UIGraphicsGetCurrentContext() points:self.drawPointModels color:[UIColor colorWithRed:69.0/255.0 green:167.0/255.0 blue:252.0/255.0 alpha:1.0] lineWidth:3];
         }
@@ -263,6 +266,34 @@
         CGPoint startPoint = CGPointMake(lineX, self.minY);
         CGPoint endPoint = CGPointMake(lineX, self.maxY);
         [ZHDraw drawLine:UIGraphicsGetCurrentContext() startPoint:startPoint endPoint:endPoint color:[UIColor cyanColor] lineWidth:0.5];
+    }
+}
+
+//绘制分割区域阴影
+- (void)drawSegmentAreaShadow{
+    NSUInteger verticalSegmentCount = self.bottomXModels.count;
+    //纵向分隔区域阴影
+    NSArray *colorsArray = @[[UIColor colorWithRed:102.0/255.0 green:179.0/255.0 blue:255.0/255.0 alpha:0.1],[UIColor colorWithRed:102.0/255.0 green:179.0/255.0 blue:255.0/255.0 alpha:0.5]];
+    
+    for (NSInteger i = 0; i < verticalSegmentCount; i++) {
+        
+        if (i % 2 == 0) {
+            //分隔区域距离跨度
+            CGFloat distanceEachGap = (self.limitW / (verticalSegmentCount - 1));
+            //距离坐标原点的距离跨度
+            CGFloat distanceOrigin = distanceEachGap * i;
+            
+            NSMutableArray <NSValue *> *drawPoints = [NSMutableArray array];
+            [drawPoints addObject:[NSValue valueWithCGPoint:CGPointMake(self.minX + distanceOrigin, self.maxY)]];
+            [drawPoints addObject:[NSValue valueWithCGPoint:CGPointMake(self.minX + distanceOrigin, self.minY)]];
+            [drawPoints addObject:[NSValue valueWithCGPoint:CGPointMake(self.minX + distanceOrigin + distanceEachGap, self.minY)]];
+            [drawPoints addObject:[NSValue valueWithCGPoint:CGPointMake(self.minX + distanceOrigin + distanceEachGap, self.maxY)]];
+            [drawPoints addObject:[NSValue valueWithCGPoint:CGPointMake(self.minX + distanceOrigin, self.maxY)]];
+            
+            //绘制
+            CGFloat locations[] = {0.0, 1.0};
+            [ZHDraw drawGradientArea:UIGraphicsGetCurrentContext() points:drawPoints colors:colorsArray locations:locations fillAlpha:0.5];
+        }
     }
 }
 

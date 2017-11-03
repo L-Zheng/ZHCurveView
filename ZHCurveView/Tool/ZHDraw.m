@@ -123,7 +123,7 @@
     CGContextStrokePath(ctx);
 }
 
-+ (void)drawGradientArea:(CGContextRef)ctx points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors fillAlpha:(CGFloat)fillAlpha{
++ (void)drawGradientArea:(CGContextRef)ctx points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors locations:(CGFloat *)locations fillAlpha:(CGFloat)fillAlpha{
     
     if (points.count == 0 || colors.count == 0) return;
     
@@ -151,7 +151,7 @@
     
     //渐变
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
-    CGFloat locations[] = {0.0, 1.0};
+//    CGFloat locations[] = {0.0, 1.0};
     
     NSMutableArray *refColors = [NSMutableArray array];
     for (UIColor *color in colors) {

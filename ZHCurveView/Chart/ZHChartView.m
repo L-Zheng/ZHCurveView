@@ -33,11 +33,12 @@
     [drawPoints addObject:[NSValue valueWithCGPoint:[self pointLeftOrigin]]];
     
     //颜色组
-    NSArray *colorsArray = @[[UIColor colorWithRed:102.0/255.0 green:179.0/255.0 blue:255.0/255.0 alpha:0.5], [UIColor colorWithRed:102.0/255.0 green:179.0/255.0 blue:255.0/255.0 alpha:0.1]];
+    NSArray *colorsArray = @[[UIColor colorWithRed:0/255.0 green:255.0/255.0 blue:0/255.0 alpha:0.5], [UIColor colorWithRed:0/255.0 green:255.0/255.0 blue:0/255.0 alpha:0.1]];
     
     
     //绘制
-    [ZHDraw drawGradientArea:UIGraphicsGetCurrentContext() points:drawPoints colors:colorsArray fillAlpha:0.5];
+    CGFloat locations[] = {0.0, 1.0};
+    [ZHDraw drawGradientArea:UIGraphicsGetCurrentContext() points:drawPoints colors:colorsArray locations:locations fillAlpha:0.5];
 }
 
 
