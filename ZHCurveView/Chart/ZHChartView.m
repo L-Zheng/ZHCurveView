@@ -17,7 +17,7 @@
     
     if (self.bottomXModels.count && self.leftYModels.count && self.drawPointModels.count && self.drawPointModels.count) {
         //5、绘制覆盖阴影
-        [self drawGradient:self.drawPointModels];
+//        [self drawGradient:self.drawPointModels];
     }
 }
 

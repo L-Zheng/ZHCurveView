@@ -37,6 +37,12 @@ typedef NS_ENUM(NSInteger, CoordinateTextAlignment) {
 /** 点数据绘制线 */
 + (void)drawLine:(CGContextRef)ctx points:(NSArray <NSValue *> *)points color:(UIColor *)color lineWidth:(CGFloat)lineWidth;
 
-/** 绘制渐变区域 */
+/** 绘制渐变区域 CGContext */
 + (void)drawGradientArea:(CGContextRef)ctx points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors locations:(CGFloat *)locations fillAlpha:(CGFloat)fillAlpha;
+
+/** 绘制渐变区域 Layer */
+//+ (void)drawGradientArea:(CGContextRef)ctx points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors locations:(CGFloat *)locations fillAlpha:(CGFloat)fillAlpha;
+
+/** 绘制渐变曲线 Layer */
++ (void)drawGradientLine:(UIView *)bgView limitRect:(CGRect)limitRect points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors lineWidth:(CGFloat)lineWidth;
 @end

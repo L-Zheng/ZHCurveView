@@ -173,4 +173,65 @@
     CGPathRelease(fillPath);
 }
 
+/** 绘制渐变曲线 Layer */
++ (void)drawGradientLine:(UIView *)bgView limitRect:(CGRect)limitRect points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors lineWidth:(CGFloat)lineWidth{
+    
+    if (points.count == 0) return;
+    
+    CGFloat limitX = limitRect.origin.x;
+    CGFloat limitMaxX = CGRectGetMaxX(limitRect);
+    CGFloat limitY = limitRect.origin.y;
+    CGFloat limitMaxY = CGRectGetMaxY(limitRect);
+    CGFloat limitW = limitRect.size.width;
+    CGFloat limitH = limitRect.size.height;
+    CGFloat lineWidthHalf = lineWidth / 2.0;
+    
+    //创建背景View
+    UIView *gradientBGView = [[UIView alloc] initWithFrame:bgView.bounds];
+    [bgView addSubview:gradientBGView];
+    
+    //创建渐变layer
+    CAGradientLayer *gradientBGLayer = [CAGradientLayer layer];
+    gradientBGLayer.frame = gradientBGView.bounds;
+    CGFloat startXScale = (limitX - lineWidthHalf) / bgView.bounds.size.width;
+    CGFloat endXScale = (limitX + limitW + lineWidthHalf) / bgView.bounds.size.width;
+    gradientBGLayer.startPoint = CGPointMake(startXScale,0.0);
+    gradientBGLayer.endPoint = CGPointMake(endXScale,0.0);
+    NSMutableArray *newColors = [NSMutableArray array];
+    for (UIColor *color in colors) {
+        [newColors addObject:(__bridge id)color.CGColor];
+    }
+    gradientBGLayer.colors = newColors;
+    [gradientBGView.layer addSublayer:gradientBGLayer];
+    
+    //根据点数据绘制渐变线条
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    NSUInteger drawPointsCount = points.count;
+//    [path moveToPoint:CGPointMake(limitX, limitMaxY)];
+    [points enumerateObjectsUsingBlock:^(NSValue * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        
+        CGPoint point = CGPointMake(obj.CGPointValue.x, obj.CGPointValue.y);
+        
+        if (idx == 0) {
+            [path moveToPoint:point];
+            //                    [path addArcWithCenter:point radius:4.0 startAngle:0 endAngle:M_PI*2 clockwise:YES];
+        }else if (idx == drawPointsCount - 1){
+            //                    [path addArcWithCenter:point radius:4.0 startAngle:0 endAngle:M_PI*2 clockwise:YES];
+            [path addLineToPoint:point];
+        }else{
+            //                    [path addArcWithCenter:point radius:4.0 startAngle:0 endAngle:M_PI*2 clockwise:YES];
+            [path addLineToPoint:point];
+        }
+    }];
+//    [path addLineToPoint:CGPointMake(points.lastObject.CGPointValue.x, limitMaxY)];
+    
+    CAShapeLayer *lineChartLayer = [CAShapeLayer layer];
+    lineChartLayer.path = path.CGPath;
+    lineChartLayer.strokeColor = [UIColor whiteColor].CGColor;
+    lineChartLayer.fillColor= [UIColor clearColor].CGColor;
+    lineChartLayer.lineWidth = lineWidth;
+    lineChartLayer.lineCap = kCALineCapRound;
+    lineChartLayer.lineJoin = kCALineJoinRound;
+    gradientBGView.layer.mask = lineChartLayer;
+}
 @end
