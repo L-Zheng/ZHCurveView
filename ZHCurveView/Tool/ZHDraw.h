@@ -44,5 +44,5 @@ typedef NS_ENUM(NSInteger, CoordinateTextAlignment) {
 //+ (void)drawGradientArea:(CGContextRef)ctx points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors locations:(CGFloat *)locations fillAlpha:(CGFloat)fillAlpha;
 
 /** 绘制渐变曲线 Layer */
-+ (void)drawGradientLine:(UIView *)bgView limitRect:(CGRect)limitRect points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors lineWidth:(CGFloat)lineWidth;
++ (void)drawGradientLine:(UIView *)bgView limitRect:(CGRect)limitRect points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors lineWidth:(CGFloat)lineWidth animated:(BOOL)animated;
 @end

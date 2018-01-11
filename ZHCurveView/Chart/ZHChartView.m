@@ -8,6 +8,10 @@
 
 #import "ZHChartView.h"
 
+@interface ZHChartView ()
+
+@end
+
 @implementation ZHChartView
 
 #pragma mark - layout
@@ -16,8 +20,8 @@
     [super drawRect:rect];
     
     if (self.bottomXModels.count && self.leftYModels.count && self.drawPointModels.count && self.drawPointModels.count) {
-        //5、绘制覆盖阴影
-//        [self drawGradient:self.drawPointModels];
+        //5、绘制曲线下覆盖阴影
+        [self drawGradient:self.drawPointModels];
     }
 }
 

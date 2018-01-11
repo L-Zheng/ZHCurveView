@@ -47,8 +47,10 @@
     NSTimeInterval totalCount = 7.0 * 24.0;
     //每隔45秒有一次的数据
 //    NSTimeInterval limit = 7.0 * 24.0 * 2 * 2 * 3 * 5 / 0.75;
+    //每隔24小时有一次的数据
+    NSTimeInterval limit = 7.0 * 24.0 * (1.0 / 24.0);
     //每隔5分钟有一次的数据
-    NSTimeInterval limit = 7.0 * 24.0 * 2 * 2 * 3;
+//    NSTimeInterval limit = 7.0 * 24.0 * 2 * 2 * 3;
     for (NSUInteger i = 0; i < limit; i ++) {
         NSTimeInterval timeStamp = [currentDate timeIntervalSince1970];
         NSNumber *timeStampNumber = [NSNumber numberWithDouble:timeStamp];

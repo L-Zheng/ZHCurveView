@@ -143,8 +143,7 @@
             NSArray *colors = @[[UIColor colorWithRed:94.0/255.0 green:166.0/255.0 blue:255.0/255.0 alpha:1.0],
                                 [UIColor colorWithRed:74.0/255.0 green:122.0/255.0 blue:255.0/255.0 alpha:1.0],
                                 [UIColor colorWithRed:85.0/255.0 green:81.0/255.0 blue:255.0/255.0 alpha:1.0]];
-            [ZHDraw drawGradientLine:self limitRect:CGRectMake(self.minX, self.minY, self.limitW, self.limitH) points:self.drawPointModels colors:colors lineWidth:2.0];
-            
+            [ZHDraw drawGradientLine:self limitRect:CGRectMake(self.minX, self.minY, self.limitW, self.limitH) points:self.drawPointModels colors:colors lineWidth:2.0 animated:YES];
             //绘制曲线
 //            [ZHDraw drawLine:UIGraphicsGetCurrentContext() points:self.drawPointModels color:[UIColor colorWithRed:69.0/255.0 green:167.0/255.0 blue:252.0/255.0 alpha:1.0] lineWidth:3];
         }

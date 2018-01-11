@@ -10,6 +10,8 @@
 
 @implementation ZHDraw
 
+#pragma mark - public
+
 + (void)drawCoordinateValue:(CGPoint)point title:(NSString *)title titleColor:(UIColor *)titleColor coordinateTextAlignment:(CoordinateTextAlignment)coordinateTextAlignment{
     
     // 画文字
@@ -174,7 +176,7 @@
 }
 
 /** 绘制渐变曲线 Layer */
-+ (void)drawGradientLine:(UIView *)bgView limitRect:(CGRect)limitRect points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors lineWidth:(CGFloat)lineWidth{
++ (void)drawGradientLine:(UIView *)bgView limitRect:(CGRect)limitRect points:(NSArray <NSValue *> *)points colors:(NSArray <UIColor *> *)colors lineWidth:(CGFloat)lineWidth animated:(BOOL)animated{
     
     if (points.count == 0) return;
     
@@ -233,5 +235,27 @@
     lineChartLayer.lineCap = kCALineCapRound;
     lineChartLayer.lineJoin = kCALineJoinRound;
     gradientBGView.layer.mask = lineChartLayer;
+    
+    //执行动画
+    if (animated) {
+        [self drawGradientLineAnimation:lineChartLayer];
+    }
 }
+
+#pragma mark - private
+
++ (void)drawGradientLineAnimation:(CAShapeLayer *)shapeLayer{
+//    反向  @"strokeStart"
+    CABasicAnimation *pathAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    pathAnimation.duration = 5.0;
+    pathAnimation.repeatCount = 1;
+    pathAnimation.removedOnCompletion = NO;
+    pathAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    pathAnimation.fromValue = [NSNumber numberWithInt:0.0];
+    pathAnimation.toValue = [NSNumber numberWithInt:1.0];
+//    pathAnimation.delegate = self;
+
+    [shapeLayer addAnimation:pathAnimation forKey:@"strokeEndAnimation"];
+}
+
 @end
